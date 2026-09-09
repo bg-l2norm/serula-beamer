@@ -1,0 +1,134 @@
+% !TeX program = xelatex
+\documentclass[aspectratio=169,14pt]{beamer}
+\usetheme{Serula}
+
+\title[Serula]{Serula}
+\subtitle{The slides are further along}
+\author{Your name}
+\institute{Department of unfinished business}
+\date{}
+
+\begin{document}
+
+\begin{frame}[t,noframenumbering]
+  \titlepage
+\end{frame}
+
+\section{Structure}
+\begin{frame}[t]{Lists and small digressions}
+  \framesubtitle{Bullets, numbers, and a block}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \subheading{Unordered list}
+      \begin{itemize}
+        \item A point.
+          \begin{itemize}
+            \item A supporting detail.
+              \begin{itemize}
+                \item A small digression.
+              \end{itemize}
+          \end{itemize}
+        \item Back to the point.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \subheading{Ordered list}
+      \begin{enumerate}
+        \item Duplicate a slide.
+          \begin{enumerate}
+            \item Change the text.
+              \begin{enumerate}
+                \item This bit too.
+              \end{enumerate}
+          \end{enumerate}
+        \item Read it once out loud.
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+  \vspace{1mm}
+  \begin{block}{A note on space}
+    You can leave some of it empty.
+  \end{block}
+\end{frame}
+
+\section{Numbers}
+\begin{frame}[t]{Equations and tables}
+  \framesubtitle{One rule, three examples}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.53\textwidth}
+      {\small A number multiplied by itself:\par}
+      \begin{align*}
+        f(x) &= x^2,\\
+        f(3) &= 9.
+      \end{align*}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \begin{table}
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{@{}rr@{}}
+          \toprule
+          Number & Square \\
+          \midrule
+          1 & 1 \\
+          2 & 4 \\
+          3 & 9 \\
+          \bottomrule
+        \end{tabular}
+        \caption{Three examples.}
+      \end{table}
+    \end{column}
+  \end{columns}
+  \vspace{1mm}
+  {\small\itshape The next row is left to the reader.\par}
+\end{frame}
+
+\input{figures/moving-dot}
+
+\section{Visuals}
+\begin{frame}[t]{Figures}
+  \framesubtitle{A drawing and an animation}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \begin{figure}
+        \centering
+        \orbitdiagram{0}
+        \caption{A dot with nowhere urgent to be.}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{figure}
+        \centering
+        \begin{animateinline}[
+          controls,loop,poster=first,buttonsize=3mm,
+          buttonfg=0.2:0.2:0.7,
+          alttext={A dot moving around a circular path}
+        ]{12}
+          \multiframe{36}{iAngle=0+10}{\orbitdiagram{\iAngle}}
+        \end{animateinline}
+        \caption{The same dot, taking the long way.}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \vspace{2mm}
+  {\small\color{Secondary}Use the playback controls in a compatible PDF viewer.\par}
+\end{frame}
+
+\section{References}
+\begin{frame}[t]{References}
+  \framesubtitle{Here go your sources}
+  \begin{thebibliography}{9}
+    \bibitem{sample-book}
+      Author name.
+      \newblock \emph{Book title}.
+      \newblock Publisher, year.
+
+    \bibitem{sample-article}
+      Author name and Coauthor name.
+      \newblock Article title.
+      \newblock \emph{Journal name}, volume(issue):pages, year.
+  \end{thebibliography}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,158 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemeSerula}[Serula presentation theme]
+
+\RequirePackage{fontspec}
+\RequirePackage{mathtools}
+\ExplSyntaxOn
+\msg_redirect_name:nnn { unicode-math } { mathtools-overbracket } { info }
+\msg_redirect_name:nnn { unicode-math } { mathtools-colon } { info }
+\ExplSyntaxOff
+\RequirePackage{unicode-math}
+\RequirePackage{microtype}
+\RequirePackage{booktabs}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\RequirePackage[method=widget]{animate}
+
+\setmainfont{CrimsonPro}[
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+  Ligatures=TeX
+]
+\setmathfont{STIXTwoMath-Regular.otf}
+\unimathsetup{math-style=ISO,bold-style=ISO}
+
+\usetheme{Madrid}
+\usefonttheme{serif}
+\usefonttheme{professionalfonts}
+\linespread{1.04}
+
+\definecolor{Secondary}{HTML}{555555}
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{title}{use=structure,fg=structure.fg,bg=white}
+\setbeamercolor{subtitle}{fg=Secondary,bg=white}
+\setbeamercolor{frametitle}{use=structure,fg=structure.fg,bg=white}
+\setbeamercolor{framesubtitle}{fg=Secondary,bg=white}
+\setbeamercolor{subheading}{parent=structure}
+\setbeamercolor{caption}{fg=Secondary}
+\setbeamercolor{caption name}{parent=structure}
+
+\setbeamerfont{title}{size=\fontsize{34}{38},series=\mdseries}
+\setbeamerfont{subtitle}{size=\fontsize{15}{19},series=\mdseries}
+\setbeamerfont{author}{size=\fontsize{12}{15}}
+\setbeamerfont{institute}{size=\fontsize{11}{14}}
+\setbeamerfont{frametitle}{size=\fontsize{25}{29},series=\mdseries}
+\setbeamerfont{framesubtitle}{size=\fontsize{11}{14},series=\mdseries}
+\setbeamerfont{subheading}{size=\fontsize{14}{17},series=\mdseries}
+\setbeamerfont{headline}{size=\fontsize{10}{12},series=\mdseries}
+\setbeamerfont{block title}{size=\fontsize{13}{16},series=\mdseries}
+\setbeamerfont{block body}{size=\fontsize{12}{15}}
+\setbeamerfont{block title alerted}{parent=block title}
+\setbeamerfont{block body alerted}{parent=block body}
+\setbeamerfont{block title example}{parent=block title}
+\setbeamerfont{block body example}{parent=block body}
+\setbeamerfont{caption}{size=\fontsize{10}{12}}
+\setbeamerfont{caption name}{series=\mdseries}
+\setbeamerfont{footnote}{size=\fontsize{9}{11}}
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{13}{17}}
+\setbeamerfont{itemize/enumerate subbody}{size=\fontsize{12}{16}}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\fontsize{11}{15}}
+\setbeamerfont{description item}{series=\mdseries,shape=\itshape}
+
+\newlength{\serulamargin}
+\setlength{\serulamargin}{13mm}
+\setbeamersize{text margin left=\serulamargin,text margin right=\serulamargin}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{itemize item}{\small\textbullet}
+\setbeamertemplate{itemize subitem}{\small\textendash}
+\setbeamertemplate{itemize subsubitem}{\scriptsize\ensuremath{\circ}}
+\setbeamertemplate{enumerate item}{\insertenumlabel.}
+\setbeamertemplate{enumerate subitem}{\insertenumlabel.\insertsubenumlabel}
+\setbeamertemplate{enumerate subsubitem}{\insertenumlabel.\insertsubenumlabel.\insertsubsubenumlabel}
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamertemplate{bibliography item}[text]
+\setbeamercovered{invisible}
+\setlength{\emergencystretch}{1em}
+
+\setbeamertemplate{headline}{%
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[
+      wd=0.76\paperwidth,ht=5.2mm,dp=2.4mm,leftskip=\serulamargin,rightskip=3mm
+    ]{palette primary}%
+      \usebeamerfont{headline}%
+      \ifnum\insertframenumber>0\relax
+        \insertshorttitle
+      \fi
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[
+      wd=0.24\paperwidth,ht=5.2mm,dp=2.4mm,leftskip=3mm,rightskip=\serulamargin
+    ]{palette tertiary}%
+      \usebeamerfont{headline}\hfill
+      \ifnum\insertframenumber>0\relax
+        \insertframenumber\,/\,\inserttotalframenumber
+      \fi
+    \end{beamercolorbox}%
+  }%
+}
+
+\setbeamertemplate{frametitle}{%
+  \vspace{3mm}%
+  {\usebeamerfont{frametitle}\insertframetitle\par}%
+  {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\par}%
+}
+
+\setbeamertemplate{title page}{%
+  \vspace{10mm}
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+  \vspace{4mm}
+  {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+  \vspace{8mm}
+  {\usebeamerfont{author}\insertauthor\par}
+  \vspace{1mm}
+  {\usebeamerfont{institute}\color{Secondary}\insertinstitute\par}
+  {\usebeamerfont{institute}\color{Secondary}\insertdate\par}
+}
+
+\newcommand{\subheading}[1]{%
+  \par{\usebeamerfont{subheading}\usebeamercolor[fg]{subheading}#1\par}\vspace{1mm}%
+}
+\newcommand{\slidefigure}[3][0.43\textheight]{%
+  \begin{figure}
+    \centering
+    \includegraphics[width=\linewidth,height=#1,keepaspectratio]{#2}
+    \caption{#3}
+  \end{figure}%
+}
+\newcommand{\animatedfigure}[5][]{%
+  \animategraphics[
+    width=\linewidth,controls,loop,poster=first,buttonsize=3mm,#1
+  ]{#2}{#3}{#4}{#5}%
+}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ind}{\mathbb{1}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\se}{se}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\inner}{\langle}{\rangle}
+\newcommand{\convd}{\xrightarrow{\mathrm{d}}}
+\newcommand{\convp}{\xrightarrow{\mathrm{p}}}
+
+\endinput
