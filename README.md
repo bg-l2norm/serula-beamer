@@ -3,6 +3,10 @@
 A very lovely, rather elegant, and exceptionally legible serif Beamer theme for mathematical talks, classes, and slide shows.
 (Mathematical $\LaTeX$ has never been so forgiving).
 
+<img width="1918" height="1102" alt="image" src="https://github.com/user-attachments/assets/16f50a67-ac13-4b30-b840-2a1830ff88ae" />
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/21b1a041-7797-4025-9408-a9063fd89f91" />
+
+
 Crimson Pro Regular for body text; STIX Two Math for the equations.
 
 ## Make it yours
