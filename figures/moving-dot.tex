@@ -1,0 +1,11 @@
+\newcommand{\orbitdiagram}[1]{%
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \usebeamercolor{structure}
+    \path[use as bounding box] (-2.5,-1.3) rectangle (2.5,1.3);
+    \fill[structure.fg!6] (0,0) circle[radius=1.05];
+    \draw[structure.fg!45,line width=0.8pt] (0,0) circle[radius=1.05];
+    \draw[Secondary!50,densely dashed] (0,0) -- (#1:1.05);
+    \fill[Secondary] (0,0) circle[radius=0.035];
+    \fill[structure.fg] (#1:1.05) circle[radius=0.12];
+  \end{tikzpicture}%
+}
