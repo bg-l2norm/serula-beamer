@@ -5,8 +5,14 @@ A very lovely, rather elegant, and exceptionally legible serif Beamer theme for 
 
 It uses Crimson Pro Regular for body text and STIX Two Math for equations.
 
-<img width="1918" height="1102" alt="image" src="https://github.com/user-attachments/assets/16f50a67-ac13-4b30-b840-2a1830ff88ae" />
-<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/21b1a041-7797-4025-9408-a9063fd89f91" />
+## Screenshots
+
+<img width="960" height="540" alt="01-title" src="https://github.com/user-attachments/assets/06568b5b-e6b1-4830-92cd-758dedefc117" />
+<img width="960" height="540" alt="02-lists" src="https://github.com/user-attachments/assets/eac405c3-ddf3-4536-a479-d2a83618bc54" />
+<img width="960" height="540" alt="03-equations-and-tables" src="https://github.com/user-attachments/assets/524498db-7052-41bf-bbc3-36d44a852ab0" />
+<img width="960" height="540" alt="04-figures" src="https://github.com/user-attachments/assets/9953ebd9-c141-401b-987b-36662c4a044b" />
+<img width="960" height="540" alt="05-references" src="https://github.com/user-attachments/assets/981a8e7d-e2f5-4ce9-869b-3ac7872027e9" />
+
 
 ## Make it yours
 
