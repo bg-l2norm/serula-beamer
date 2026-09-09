@@ -7,11 +7,15 @@ It uses Crimson Pro Regular for body text and STIX Two Math for equations.
 
 ## Screenshots
 
-<img width="960" height="540" alt="01-title" src="https://github.com/user-attachments/assets/06568b5b-e6b1-4830-92cd-758dedefc117" />
-<img width="960" height="540" alt="02-lists" src="https://github.com/user-attachments/assets/eac405c3-ddf3-4536-a479-d2a83618bc54" />
-<img width="960" height="540" alt="03-equations-and-tables" src="https://github.com/user-attachments/assets/524498db-7052-41bf-bbc3-36d44a852ab0" />
-<img width="960" height="540" alt="04-figures" src="https://github.com/user-attachments/assets/9953ebd9-c141-401b-987b-36662c4a044b" />
-<img width="960" height="540" alt="05-references" src="https://github.com/user-attachments/assets/981a8e7d-e2f5-4ce9-869b-3ac7872027e9" />
+![01-title](https://github.com/user-attachments/assets/06568b5b-e6b1-4830-92cd-758dedefc117)
+
+![02-lists](https://github.com/user-attachments/assets/eac405c3-ddf3-4536-a479-d2a83618bc54)
+
+![03-equations-and-tables](https://github.com/user-attachments/assets/524498db-7052-41bf-bbc3-36d44a852ab0)
+
+![04-figures](https://github.com/user-attachments/assets/9953ebd9-c141-401b-987b-36662c4a044b)
+
+![05-references](https://github.com/user-attachments/assets/981a8e7d-e2f5-4ce9-869b-3ac7872027e9)
 
 
 ## Make it yours
