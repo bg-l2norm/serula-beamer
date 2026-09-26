@@ -1,6 +1,6 @@
 # Serula
 
-A very lovely, rather elegant, and exceptionally legible serif Beamer theme for mathematical talks, classes, and slide shows.
+A very lovely and exceptionally legible serif Beamer theme for mathematical talks, classes, and slide shows.
 (Typesetting mathematics in $\LaTeX$ has never been so forgiving.)
 
 It uses Crimson Pro Regular for body text and STIX Two Math for equations.
